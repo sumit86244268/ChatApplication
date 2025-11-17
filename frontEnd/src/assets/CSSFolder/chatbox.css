@@ -1,0 +1,110 @@
+.mainChatBox {
+    width: 100%;
+    height: calc(100% - 67px);
+    margin-top: 10px;
+    /* border: 1px solid black; */
+}
+
+
+
+.messageInputbox {
+    /* border: 1px solid red; */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+
+.inputDiv {
+    /* height: 50px; */
+    min-height: 45px;
+    max-height: 80px;
+    width: calc(100% - 45px);
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 30px;
+    margin-left: 25px;
+
+}
+
+
+.enterMessageBtn {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 7px;
+}
+
+.enterMessageBtn img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.messageInput {
+    width: 100%;
+    min-height: 45px;
+    max-height: 45px;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex: 1;
+    /* line-height: 45px; */
+    /* border: 1px solid black;   */
+    border-radius: 30px;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgba(56, 56, 56, 0.803);
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.messageInput:focus {
+    outline: none;
+    border-style: none;
+    /* border: 2px solid #323232; */
+    /* box-shadow: 0 0 4px rgba(0,123,255,0.4); */
+
+}
+
+.typingClass {
+    height: 30px;
+    width: 30px;
+    border-radius: 25px 25px 25px 5px;
+    /* border: 1px solid rgb(32, 32, 32); */
+    position: absolute;
+    /* margin-bottom: 5px; */
+    margin-left: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/Image/icons8-chat-bubble-48.gif") center center/cover;
+    /* animation: blink 0.5s ease-out alternate; */
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: opacity 0.35s ease-out;
+}
+
+/* @keyframes blink {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+} */
+
+.typingActive {
+    opacity: 1;
+    /* visibility: visible; */
+}
