@@ -1,0 +1,11 @@
+.chatsDiv {
+    width: calc(100% - 420px);
+    height: calc(100% - 10px);
+    /* border: 1px solid blue; */
+    /* background-color: #574CD6; */
+     /* background-color: #867DAC; */
+    background-image: linear-gradient(to top, #3D394A, #958cc0);
+    
+    margin: 10px 10px 10px 0px;
+    border-radius: 30px;
+}

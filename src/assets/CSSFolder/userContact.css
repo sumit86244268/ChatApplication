@@ -1,0 +1,11 @@
+.contactDiv {
+    width: 400px;
+    height: 100%;
+    /* border: 1px solid blue; */
+
+}
+
+.searchInput{
+    width: 100px;
+    height: 40px;
+}

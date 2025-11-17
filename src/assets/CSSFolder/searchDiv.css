@@ -1,0 +1,55 @@
+.UserFullName {
+    width: 270px;
+    font-size: 13px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgba(109, 109, 109, 0.803);
+    font-weight: 600;
+}
+
+.inviteBtn {
+    background-color: #958CC5;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgba(250, 250, 250, 0.803);
+    font-weight: 600;
+}
+
+.width {
+    width: 205px;
+}
+
+.searchInput{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchInput input{
+    width: 280px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(94, 94, 94, 0.803);
+    font-size: 17px;
+    /* border-radius: 20px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgba(94, 94, 94, 0.803);
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+}

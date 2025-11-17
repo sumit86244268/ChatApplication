@@ -1,0 +1,94 @@
+/* Message Box */
+
+.messageBox {
+    /* border: 1px solid red; */
+    height: calc(100% - 90px);
+    display: flex;
+    /* justify-content: end; */
+    /* flex-direction: column-reverse; */
+    flex-grow: 1;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.contactBox::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    /* border: 1px solid rgb(162, 238, 40); */
+    width: 100%;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 10px 0;
+}
+
+.messageLeft {
+    justify-content: left;
+}
+
+.messageRight {
+    justify-content: right;
+}
+
+.messageBorder {
+    /* border: 1px solid green; */
+    /* background-color: aliceblue; */
+    max-width: 400px;
+    display: flex;
+}
+
+.messageDec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px 15px;
+}
+
+.left {
+    background-color: #9692aa;
+    border-radius: 0 20px 20px 20px;
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.right {
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 20px;
+    margin-right: 15px;
+    color: rgba(92, 92, 92, 0.803);
+}
+
+.messageText {
+    font-size: 15px;
+}
+
+
+.messageTimeAndStaus {
+
+    font-size: 10px;
+    margin-right: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.StatusImg {
+    margin-left: 7px;
+}
+
+.StatusImg img {
+    width: 13px;
+    height: 13px;
+}
+
+.leftStatus {
+    display: none;
+}
