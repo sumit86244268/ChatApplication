@@ -1,0 +1,86 @@
+.chatsHeader {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+
+}
+
+.Navleft {
+    width: 450px;
+    height: 60px;
+    display: flex;
+     /* border: 1px solid rgb(0, 0, 0); */
+     align-items: center;
+}
+
+.profilePicForChatBox {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* border: 1px solid rgb(0, 0, 0); */
+     margin: 0 10px;
+}
+
+.profilePicForChatBox img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.userDetailsForChatBox {
+    width: 380px;
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+
+
+.userNameAndStatus {
+    width: 380px;
+     /* border: 1px solid rgb(0, 0, 0); */
+     
+}
+
+.userNameForChatBox{
+    width: 380px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgb(243, 243, 243);
+     /* border: 1px solid rgb(0, 0, 0); */
+}
+
+
+.loginStatus {
+    /* border: 1px solid rgb(38, 255, 0); */
+    width: 380px;
+    font-size: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.705);
+    font-weight: 600;
+     /* border: 1px solid rgb(0, 0, 0); */
+     line-height: 1;
+}
+
+.menuForChat {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color
+    : rgb(243, 243, 243);
+    /* border: 1px solid rgb(255, 0, 230); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+     /* border: 1px solid rgb(0, 0, 0); */
+}

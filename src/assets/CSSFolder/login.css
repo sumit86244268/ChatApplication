@@ -1,0 +1,285 @@
+.loginMain {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid rgb(255, 213, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/Image/bgImage.jpg") center center/cover;
+}
+
+.loginForm {
+    width: 400px;
+    height: 550px;
+    /* border: 1px solid rebeccapurple; */
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #3D394A, #a49ad9);
+    /* box-shadow: -2px 0px 10px black; */
+}
+
+
+.formForLogin {
+    width: 400px;
+    height: 550px;
+    /* border: 1px solid rebeccapurple; */
+    border-radius: 30px;
+}
+
+.formTitle {
+    width: 400px;
+    height: 60px;
+    border-bottom: 2px solid #F2F2F2;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.Psignin {
+    /* padding-left: 20px; */
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 23px;
+    /* line-height: 1.0; */
+}
+
+.Psignin span {
+    color: rgb(82, 82, 82);
+}
+
+.loginSlider {
+    width: 400px;
+    height: 35px;
+    /* border: 1px solid red; */
+    /* margin-top: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.innerSlider {
+    /* border: 1px solid red; */
+    width: 150px;
+    height: 35px;
+    background-color: #F2F2F2;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-top: 8px;
+}
+
+.sliderCommon {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #F2F2F2;
+    font-weight: 600;
+    font-size: 15px;
+
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectedOption {
+    color: #F2F2F2;
+    background-color: #958CC5;
+}
+
+.unselectedOption {
+    color: #6b6b6b;
+    font-weight: 700;
+}
+
+.formFields {
+    width: 400px;
+    height: 300px;
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formFields input {
+    width: 350px;
+    height: 40px;
+    background-color: #F2F2F2;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgba(56, 56, 56, 0.803);
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.formFields label {
+    width: 350px;
+    height: 20px;
+    margin-top: 15px;
+    padding-left: 15px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #F2F2F2;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.passwordField {
+    width: 350px;
+    height: 40px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.passwordField input {
+    width: 325px;
+
+}
+
+.passwordField img {
+    width: 16px;
+    height: 16px;
+
+}
+
+.Submit {
+    margin-top: 70px;
+}
+
+.loginPro {
+    margin-top: 50px;
+}
+
+
+.signupCss {
+    height: 400px;
+}
+
+.nextorback {
+    width: 350px;
+    height: 35px;
+    /* border: 1px solid red; */
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commonNorB {
+    width: 80px;
+    height: 35px;
+    background-color: #a69cd9;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #F2F2F2;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileupload {
+    width: 350px;
+    height: 220px;
+    /* border: 1px solid rgb(255, 18, 18); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.selectedImg {
+    width: 138px;
+    height: 138px;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectedImg img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.suggestionField {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #F2F2F2;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.profileDefault::file-selector-button {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.addProfile input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.uploadBtn {
+    width: 70px;
+    height: 35px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #6b6b6b;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addProfile {
+    /* border: 1px solid green; */
+    width: 350px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.profileCss{
+    margin-top: 10px;
+}
+
+
+.signupsplCss{
+    margin-top: 40px;
+    background-color: #958CC5;
+}
