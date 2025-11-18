@@ -3,7 +3,6 @@ import '../../CSSFolder/login.css';
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { connectWebSocket , disconnectWebSocket} from "../../JSFolder/websocket";
-import {apiUrl} from "../../JSFolder/ApiLink";
 
 
 
@@ -17,7 +16,7 @@ function Login({ setUser, setUserDetails }) {
     const fileInputRef = useRef(null);
     const navigate = useNavigate();
     const [userDataForWS, setUserDataForWS] = useState(null);
-
+    const API_URL = import.meta.env.VITE_API_URL;
     // useEffect(() => {
     //     if (userDataForWS?.username) {
     //         if (userDataForWS?.username) {
@@ -62,7 +61,7 @@ function Login({ setUser, setUserDetails }) {
         const data = new FormData();
         data.append("file", file);
 
-        const res = await axios.post(`${apiUrl}/api/user/uploadProfilePic/1`, data);
+        const res = await axios.post(`${API_URL}/api/user/uploadProfilePic/1`, data);
         if (res.data) {
             form.profilePic = res.data;
             setLoadprofile(true);
@@ -94,7 +93,7 @@ function Login({ setUser, setUserDetails }) {
     const submitSignInData = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post(`${apiUrl}/api/user/login`, loginform);
+            const result = await axios.post(`${API_URL}/api/user/login`, loginform);
             // console.log(result.data.userFount._id);
             if (result) {
                 setUser(result.data.email);
@@ -117,7 +116,7 @@ function Login({ setUser, setUserDetails }) {
         }
         try {
 
-            const result = await axios.post(`${apiUrl}/api/user/signup`, form);
+            const result = await axios.post(`${API_URL}/api/user/signup`, form);
             console.log("signup success");
             navigate("/Home");
         } catch (error) {

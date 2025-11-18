@@ -2,12 +2,12 @@ import { Link } from 'react-scroll';
 import axios from "axios";
 import '../../../CSSFolder/searchDiv.css';
 import React, { useState, useEffect } from "react";
-import {apiUrl} from "../../../JSFolder/ApiLink";
+
 
 
 function SearchInput({setResults, userDetails, friendsList}) {
     const [keyword, setKeyword] = useState("");
-
+    const API_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         if (keyword.trim() === "") {
@@ -19,7 +19,7 @@ function SearchInput({setResults, userDetails, friendsList}) {
 
         const fetchUsers = async () => {
             try {
-                const res = await axios.post(`${apiUrl}/api/user/search`,friendsList, {
+                const res = await axios.post(`${API_URL}/api/user/search`,friendsList, {
                     params: { keyword, presentUser
                     }
                 });

@@ -9,7 +9,7 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { connectWebSocket, getStompClient, disconnectWebSocket, events, sendMsg, sendTyping } from "../../../JSFolder/websocket"
-import {apiUrl} from "../../../JSFolder/ApiLink";
+
 
 
 function ChatBox({ userDetails, receiverDetails, userStatusForMsg }) {
@@ -22,6 +22,8 @@ function ChatBox({ userDetails, receiverDetails, userStatusForMsg }) {
     const typingTimeoutRef = useRef(null);
     const defaultPic = "Image\\defaultPro.jpeg";
     const boxRef = useRef();
+    const API_URL = import.meta.env.VITE_API_URL;
+
     dayjs.extend(utc);
     dayjs.extend(timezone);
     const istTime = dayjs().tz("Asia/Kolkata").format("YYYY-MM-DDTHH:mm:ss");
@@ -147,7 +149,7 @@ function ChatBox({ userDetails, receiverDetails, userStatusForMsg }) {
 
     useEffect(() => {
         if (!receiverDetails) return;
-        axios.get(`${apiUrl}/api/chat/${userDetails.username}/${receiverDetails.senderUsername}`)
+        axios.get(`${API_URL}/api/chat/${userDetails.username}/${receiverDetails.senderUsername}`)
             .then(res => setMessages(res.data))
             .catch(err => console.error("Chat history error", err));
     }, [userDetails.username, receiverDetails]);

@@ -3,12 +3,13 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import '../../../CSSFolder/contactBox.css'
 import '../../../CSSFolder/searchDiv.css'
-import {apiUrl} from "../../../JSFolder/ApiLink";
+
 
 
 function SearchDiv({ user, results, userDetails, inviteDiv }) {
     const safeResults = results || [];
     const defaultPic = "Image\\defaultPro.jpeg";
+    const API_URL = import.meta.env.VITE_API_URL;
     const [sender, setSender] = useState("");
     // const [receiver, setReceiver] = useState("");
     const [inviteResults, setInviteResults] = useState([]);
@@ -35,7 +36,7 @@ function SearchDiv({ user, results, userDetails, inviteDiv }) {
 
     const fetchUsersInvites = async () => {
         try {
-            const res = await axios.get(`${apiUrl}/api/invites/received/${userDetails.username}`);
+            const res = await axios.get(`${API_URL}/api/invites/received/${userDetails.username}`);
             setInviteResults(res.data);
             console.log(res.data);
         } catch (err) {
@@ -44,7 +45,7 @@ function SearchDiv({ user, results, userDetails, inviteDiv }) {
     };
 
     const sendInvite = async (senderUsername, receiverUsername) => {
-        const res = await axios.post(`${apiUrl}/api/invites/send` + `?senderUsername=` + senderUsername + `&receiverUsername=` + receiverUsername);
+        const res = await axios.post(`${API_URL}/api/invites/send` + `?senderUsername=` + senderUsername + `&receiverUsername=` + receiverUsername);
         console.log(res.data);
     };
 
@@ -52,7 +53,7 @@ function SearchDiv({ user, results, userDetails, inviteDiv }) {
     const statusSet = async (inviteId, receiverDt) => {
         try {
             const res = await axios.post(
-                `${apiUrl}/api/invites/respond`,
+                `${API_URL}/api/invites/respond`,
                 null,
                 { params: { inviteId, status: "ACCEPTED", receiverDt} }
             );

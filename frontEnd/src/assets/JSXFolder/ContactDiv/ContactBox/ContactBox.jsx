@@ -5,15 +5,16 @@ import { Client } from "@stomp/stompjs";
 import axios from "axios";
 import '../../../CSSFolder/contactBox.css'
 import { events, sendMsgStatus } from "../../../JSFolder/websocket";
-import {apiUrl} from "../../../JSFolder/ApiLink";
+
 
 function ContactBox({ userDetails, setReceiverDetails, setFriendsList }) {
     const defaultPic = "Image\\defaultPro.jpeg";
     const [userResults, setUserResults] = useState([]);
+    const API_URL = import.meta.env.VITE_API_URL;
     const fetchUsersDetails = async () => {
         try {
             const res = await axios.get(
-                `${apiUrl}/api/invites/userdata/${userDetails.username}`
+                `${API_URL}/api/invites/userdata/${userDetails.username}`
             );
             setUserResults(res.data);
             setFriendsList(res.data);

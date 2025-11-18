@@ -1,14 +1,13 @@
 import SockJS from "sockjs-client";
 import { Client } from "@stomp/stompjs";
 import mitt from "mitt";
-import {apiUrl} from "./ApiLink";
 export const events = mitt();
 let stompClient = null;
 
 
 
 export const connectWebSocket = (username) => {
-
+    const API_URL = import.meta.env.VITE_API_URL;
     // if (stompClient && stompClient.connected) {
     //     if (onMessage) stompClient.subscribe(`/user/queue/messages`, msg =>
     //         onMessage(JSON.parse(msg.body))
@@ -46,7 +45,7 @@ export const connectWebSocket = (username) => {
     if (stompClient) return; // prevent reconnect
 
     stompClient = new Client({
-        webSocketFactory: () => new SockJS(`${apiUrl}/ws-chat?username=${username}`),
+        webSocketFactory: () => new SockJS(`${API_URL}/ws-chat?username=${username}`),
         reconnectDelay: 5000
     });
 
