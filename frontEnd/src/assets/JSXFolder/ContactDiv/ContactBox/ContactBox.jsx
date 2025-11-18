@@ -5,6 +5,7 @@ import { Client } from "@stomp/stompjs";
 import axios from "axios";
 import '../../../CSSFolder/contactBox.css'
 import { events, sendMsgStatus } from "../../../JSFolder/websocket";
+import {apiUrl} from "../../../JSFolder/ApiLink";
 
 function ContactBox({ userDetails, setReceiverDetails, setFriendsList }) {
     const defaultPic = "Image\\defaultPro.jpeg";
@@ -12,7 +13,7 @@ function ContactBox({ userDetails, setReceiverDetails, setFriendsList }) {
     const fetchUsersDetails = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:8080/api/invites/userdata/${userDetails.username}`
+                `${apiUrl}/api/invites/userdata/${userDetails.username}`
             );
             setUserResults(res.data);
             setFriendsList(res.data);

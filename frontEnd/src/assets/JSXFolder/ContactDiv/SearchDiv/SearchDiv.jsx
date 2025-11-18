@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import '../../../CSSFolder/contactBox.css'
 import '../../../CSSFolder/searchDiv.css'
+import {apiUrl} from "../../../JSFolder/ApiLink";
 
 
 function SearchDiv({ user, results, userDetails, inviteDiv }) {
@@ -34,7 +35,7 @@ function SearchDiv({ user, results, userDetails, inviteDiv }) {
 
     const fetchUsersInvites = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/api/invites/received/${userDetails.username}`);
+            const res = await axios.get(`${apiUrl}/api/invites/received/${userDetails.username}`);
             setInviteResults(res.data);
             console.log(res.data);
         } catch (err) {
@@ -43,7 +44,7 @@ function SearchDiv({ user, results, userDetails, inviteDiv }) {
     };
 
     const sendInvite = async (senderUsername, receiverUsername) => {
-        const res = await axios.post('http://localhost:8080/api/invites/send' + `?senderUsername=` + senderUsername + `&receiverUsername=` + receiverUsername);
+        const res = await axios.post(`${apiUrl}/api/invites/send` + `?senderUsername=` + senderUsername + `&receiverUsername=` + receiverUsername);
         console.log(res.data);
     };
 
@@ -51,7 +52,7 @@ function SearchDiv({ user, results, userDetails, inviteDiv }) {
     const statusSet = async (inviteId, receiverDt) => {
         try {
             const res = await axios.post(
-                `http://localhost:8080/api/invites/respond`,
+                `${apiUrl}/api/invites/respond`,
                 null,
                 { params: { inviteId, status: "ACCEPTED", receiverDt} }
             );

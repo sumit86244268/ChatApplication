@@ -1,7 +1,7 @@
 import SockJS from "sockjs-client";
 import { Client } from "@stomp/stompjs";
 import mitt from "mitt";
-
+import {apiUrl} from "./ApiLink";
 export const events = mitt();
 let stompClient = null;
 
@@ -46,7 +46,7 @@ export const connectWebSocket = (username) => {
     if (stompClient) return; // prevent reconnect
 
     stompClient = new Client({
-        webSocketFactory: () => new SockJS(`http://localhost:8080/ws-chat?username=${username}`),
+        webSocketFactory: () => new SockJS(`${apiUrl}/ws-chat?username=${username}`),
         reconnectDelay: 5000
     });
 

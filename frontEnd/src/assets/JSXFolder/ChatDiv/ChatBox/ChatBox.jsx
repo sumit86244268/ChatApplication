@@ -9,6 +9,7 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { connectWebSocket, getStompClient, disconnectWebSocket, events, sendMsg, sendTyping } from "../../../JSFolder/websocket"
+import {apiUrl} from "../../../JSFolder/ApiLink";
 
 
 function ChatBox({ userDetails, receiverDetails, userStatusForMsg }) {
@@ -146,7 +147,7 @@ function ChatBox({ userDetails, receiverDetails, userStatusForMsg }) {
 
     useEffect(() => {
         if (!receiverDetails) return;
-        axios.get(`http://localhost:8080/api/chat/${userDetails.username}/${receiverDetails.senderUsername}`)
+        axios.get(`${apiUrl}/api/chat/${userDetails.username}/${receiverDetails.senderUsername}`)
             .then(res => setMessages(res.data))
             .catch(err => console.error("Chat history error", err));
     }, [userDetails.username, receiverDetails]);
